@@ -1,8 +1,4 @@
-let URL;
-if(process.env.NODE_ENV==='production'){
-  URL = '/data.json';
-}
-else URL = 'http://localhost:3001/members';
+const URL = '/api/data.json'
 
 
 export default async function getData(setData, setIsLoading){
@@ -10,10 +6,7 @@ export default async function getData(setData, setIsLoading){
     setIsLoading(true);
     const response = await fetch(URL);
     let jsonData = await response.json();
-    if(process.env.NODE_ENV === 'production'){
-      jsonData = jsonData.members;
-    }
-    setData({ receivedData: jsonData, hasErrors: false });
+    setData({ receivedData: jsonData.members, hasErrors: false });
     setIsLoading(false);
   } catch (e) {
     console.error('Something went wrong', e);
