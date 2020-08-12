@@ -14,12 +14,11 @@ const ModalStyles = {
     top: '5%',
     left: '5%',
     right: '5%',
-    bottom: '5%'
+    bottom: '5%',
   },
 };
 
 const AcitivityDashBoard = () => {
-
   const [data, setData] = useState({ receivedData: [], hasErrors: false });
   const [isLoading, setIsLoading] = useState(false);
   const [openTheModal, setOpenTheModal] = useState({
@@ -40,7 +39,7 @@ const AcitivityDashBoard = () => {
 
   return (
     <div>
-      <h2 className="heading-1" >All Users</h2>
+      <h2 className='heading-1'>All Users</h2>
       {isLoading && (
         <div>
           Loading...
@@ -52,7 +51,8 @@ const AcitivityDashBoard = () => {
         <div>
           {data.receivedData.map((d, i) => (
             <div key={i}>
-              <span className='Activity-user-list'
+              <span
+                className='Activity-user-list'
                 onClick={() => {
                   setOpenTheModal({ isOpen: true, dataToShow: i });
                 }}
@@ -74,11 +74,17 @@ const AcitivityDashBoard = () => {
             }}
             style={ModalStyles}
           >
-            {showData.id && (
-                  <Activity data={showData} />
-            )}
+            {showData.id && <Activity data={showData} />}
 
-            {/* <button onClick={() => setOpenTheModal(false)}>Close</button> */}
+            <button className='btn-tr' onClick={() => setOpenTheModal(false)}>
+              {' '}
+              <div class='x spin large'>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+              </div>
+            </button>
           </Modal>
         </div>
       )}
