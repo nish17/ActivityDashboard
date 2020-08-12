@@ -53,3 +53,13 @@
 .heading-1:hover {
   text-decoration: underline;
 }
+
+.calendar {
+  display: flex;
+  font-size: 14px;
+}
+.main-calendar {
+  flex-grow: 1;
+  padding: 3em;
+  width: 500px;
+}
