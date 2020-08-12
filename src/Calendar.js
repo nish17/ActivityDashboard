@@ -4,7 +4,6 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 const Calendar = ({ events }) => {
-  console.log('inside calendar events', events);
   return (
     <div className='main-calendar'>
       {events.length > 0 && (
