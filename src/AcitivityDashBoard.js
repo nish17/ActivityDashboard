@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import Activity from './Activity';
 import './App.css';
 import getData from './api';
-// import Calendar from './Calendar';
+
 Modal.setAppElement('#root');
 
 const ModalStyles = {
@@ -94,5 +94,3 @@ const AcitivityDashBoard = () => {
 };
 
 export default AcitivityDashBoard;
-
-// I speak at events more than I talk with people!
