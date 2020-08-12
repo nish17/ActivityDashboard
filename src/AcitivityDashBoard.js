@@ -11,10 +11,10 @@ const ModalStyles = {
     backgroundColor: '#282c3',
   },
   content: {
-    top: '10%',
-    left: '10%',
-    right: '10%',
-    bottom: '10%'
+    top: '5%',
+    left: '5%',
+    right: '5%',
+    bottom: '5%'
   },
 };
 
@@ -78,7 +78,7 @@ const AcitivityDashBoard = () => {
                   <Activity data={showData} />
             )}
 
-            <button onClick={() => setOpenTheModal(false)}>Close</button>
+            {/* <button onClick={() => setOpenTheModal(false)}>Close</button> */}
           </Modal>
         </div>
       )}
