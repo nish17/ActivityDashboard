@@ -1,8 +1,5 @@
 var moment = require('moment');
-/**
- * 
- * @param {} month 
- */
+
 function getMonthIndex(month){
   return moment().month(month).format('M');
 }
@@ -39,4 +36,4 @@ function getTimeInRequiredFormat(dateString){
   return finalTimeString;
 } 
 
-module.exports = getDateInRequiredFormat;
+export default getDateInRequiredFormat;
