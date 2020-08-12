@@ -25,15 +25,13 @@ const Activity = ({ data }) => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h1 id='heading'>{data.real_name}'s Activity</h1>
-        <div id='full_description'>
-          <p>ID: {data.id}</p>
-          <p>TimeZone: {data.tz}</p>
-          <div id='calendar'>
-            <Calendar events={events} />
-          </div>
+    <div className='main-modal' >
+      <h1 id='heading'>{data.real_name}'s Activity</h1>
+      <div id='full_description'>
+        <p>ID: {data.id}</p>
+        <p>TimeZone: {data.tz}</p>
+        <div className='calendar'>
+          <Calendar events={events} />
         </div>
       </div>
     </div>
