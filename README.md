@@ -18,13 +18,18 @@ $ yarn install
 
 # start the server
 $ yarn start
-
-# start the backend server which 
-$ yarn backend
 ```
 
 ## Where is it deployed?
-It is currently deployed at [Netlify](https://www.netlify.com/) and used [Cloudflare](https://www.cloudflare.com/) to update the DNS and route it through my Domain (i.e) https://full-throttle.snimesh.com 
+
+It is currently deployed at [Netlify](https://www.netlify.com/) with custom domain name set to https://full-throttle.snimesh.com
+
+## Where is the mock API server deployed?
+
+We're using Netlify as the mock API server.
+The file `data.json` is placed in the `public/` directory, which is served by Netlify as a static asset.
+
+Thus the server endpoint to fetch the data becomes https://full-throttle.snimesh.com/api/data.json
 
 ## Packages used?
 
