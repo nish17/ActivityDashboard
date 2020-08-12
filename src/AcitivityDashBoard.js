@@ -75,16 +75,17 @@ const AcitivityDashBoard = () => {
             style={ModalStyles}
           >
             {showData.id && <Activity data={showData} />}
-
-            <button className='btn-tr' onClick={() => setOpenTheModal(false)}>
-              {' '}
-              <div class='x spin large'>
+            <div className='btn-tr'>
+              <div
+                className='x spin large'
+                onClick={() => setOpenTheModal(false)}
+              >
                 <b></b>
                 <b></b>
                 <b></b>
                 <b></b>
               </div>
-            </button>
+            </div>
           </Modal>
         </div>
       )}
