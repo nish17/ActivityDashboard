@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import Activity from './Activity';
 import './App.css';
 import getData from './api';
-import Calendar from './Calendar';
+// import Calendar from './Calendar';
 Modal.setAppElement('#root');
 
 const ModalStyles = {
@@ -11,11 +11,10 @@ const ModalStyles = {
     backgroundColor: '#282c3',
   },
   content: {
-    top: '50%',
-    left: '50%',
-    right: '0',
-    bottom: '0',
-    transform: 'translate(-50%, -50%)',
+    top: '10%',
+    left: '10%',
+    right: '10%',
+    bottom: '10%'
   },
 };
 
@@ -48,7 +47,7 @@ const AcitivityDashBoard = () => {
           <hr /> Please Wait!
         </div>
       )}
-      {/* // data.receivedData.length > 0 && */}
+
       {!isLoading && (
         <div>
           {data.receivedData.map((d, i) => (
@@ -62,7 +61,7 @@ const AcitivityDashBoard = () => {
               </span>
             </div>
           ))}
-          <Calendar />
+
           <Modal
             isOpen={openTheModal.isOpen}
             onAfterOpen={setModalData}
