@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.Activity-user-list {
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+.Activity-user-list:hover {
+  background-color: white;
+  color: #282c34;
+  text-decoration: double;
+}
+
+.heading-1:hover {
+  text-decoration: underline;
+}
