@@ -5,13 +5,8 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 
 const Calendar = ({ events }) => {
   console.log('inside calendar events', events);
-
-  const handleDateClick = (e) => { // bind with an arrow function
-    alert(e.dateStr)
-  }
-
   return (
-    <div>
+    <div className='main-calendar'>
       {events.length > 0 && (
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin]}
@@ -22,7 +17,7 @@ const Calendar = ({ events }) => {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay',
           }}
-          dateClick={handleDateClick}
+          height='580px'
         />
       )}
     </div>
